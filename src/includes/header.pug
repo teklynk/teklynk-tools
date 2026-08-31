@@ -1,0 +1,14 @@
+header.sticky-top#topNav
+    a.visually-hidden-focusable(href="#main") Skip to main content
+    .container-fluid.g-0
+        nav.navbar.navbar-expand-lg.bg-dark#nav-main
+            .container
+                a.navbar-brand.text-white(href="/") Teklynk Tools
+                button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNavDropdown", aria-controls="navbarNavDropdown", aria-expanded="false", aria-label="Toggle navigation")
+                    span.navbar-toggler-icon.custom-toggler
+                .collapse.navbar-collapse#navbarNavDropdown
+                    ul.navbar-nav.me-auto
+                        li.nav-item
+                            a.nav-link.d-none(href="#tools") Tools
+                    .d-flex.align-items-center
+                        a.btn.btn-outline-light.btn-sm.rounded-pill(href="/contact", target="_self") Contact

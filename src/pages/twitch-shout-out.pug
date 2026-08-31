@@ -1,0 +1,119 @@
+extends ../layout/page-layout.pug
+
+block title
+    - var date = ""
+    - var title = "Twitch Shoutout | Teklynk Tools"
+    - var description = "OBS browser-source overlay for Twitch shout-outs, queued clip playback, and chat-controlled stream promotion."
+    - var thumbnail = "https://teklynktools.com/public/assets/images/twitchshoutout01.png"
+    - var pageUrl = "https://teklynktools.com/twitchshoutout"
+    - var skills = []
+    | Teklynk Tools - Twitch Shoutout
+
+block content
+    .product-detail-page
+        section.product-detail-hero
+            .container.py-5
+                .row.align-items-center.g-5
+                    .col-lg-7
+                        span.section-kicker Twitch tool
+                        h1.display-5.fw-bold Twitch Shoutout
+                        p.lead
+                            | Browser-source overlay that generates shout-outs with a !so @username chat command, clip playback, and can send shout-out messages back into chat.
+                        .d-flex.flex-wrap.gap-3.mt-4
+                            a.btn.btn-primary.btn-lg.rounded-pill(href="https://twitchshoutout.com/" target="_blank" rel="noopener") Open app
+                            a.btn.btn-outline-light.btn-lg.rounded-pill(href="/") Back to tools
+                    .col-lg-5
+                        .detail-visual
+                            img.rounded.img-fluid.shadow-lg(src="public/assets/images/twitchshoutout01.png" alt="Twitch Shoutout overlay")
+
+        section.py-5
+            .container
+                .row.g-4
+                    .col-lg-12
+                        .detail-panel
+                            h3 When to Use
+                            ul.list-unstyled.mb-0
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong Raids incoming] — Automatically triggers a clip and shoutout when someone raids your channel
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong Promoting streamers] by playing popular clips from their channel
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong Let mods control] a shoutout using !so @username
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong Watch clips] that were posted into chat
+
+        section.py-5
+            .container
+                .row.g-4
+                    .col-md-4
+                        .detail-card
+                            .icon-wrap
+                                i.fs-1.fa-solid.fa-play
+                            h3 Clip playback
+                            p
+                                | Plays a random or recent clip from the shouted-out channel, or when someone raids your channel.
+                    .col-md-4
+                        .detail-card
+                            .icon-wrap
+                                i.fs-1.fa-solid.fa-clapperboard
+                            h3 Watch Clips
+                            p
+                                | Watch a clip that was posted into chat, !watchclip.
+                    .col-md-4
+                        .detail-card
+                            .icon-wrap
+                                i.fs-1.fa-solid.fa-comments
+                            h3 Chat commands
+                            p
+                                | Supports commands such as !so, !replayso, !stopclip, and !watchclip for live stream moderation and control.
+
+        section.py-5
+            .container
+                .row.g-4
+                    .col-lg-6
+                        .detail-panel
+                            h3 Features
+                            ul.list-unstyled
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Auto-shoutout on raids, configurable by viewer count
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | !watchclip command to play a clip that was posted into chat
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Date-range filtering and prefer-featured clip behavior
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Custom titles, chat messages, and overlay details panel
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | CSS theme options and OBS-friendly browser-source settings
+                                
+                    .col-lg-6
+                        .detail-panel
+                            h3 Configuration
+                            p
+                                | URL parameters control channel, command trigger, clip filters, raid behavior, theme options, and details panel output.
+                            div.shadow-sm 
+                                pre
+                                    code.language-html.
+                                        ?channel=mychannel&command=so&showClip=true&showDetails=true&raided=true&raidCount=25
+        section.py-5
+            .container
+                .row.g-4.align-items-center
+                    .col-lg-6
+                        .detail-gallery
+                            img.rounded.img-fluid.shadow-lg(src="public/assets/images/twitchshoutout02.png" alt="OBS stream setup")
+                    .col-lg-6
+                        .detail-panel
+                            h2 OBS setup
+                            p
+                                | Add a Browser Source in OBS, paste the generated URL, and enable the source refresh and shutdown settings so the overlay only runs when the scene is active.
+                            p
+                                | Twitch OAuth is required if you want the overlay to send a shout-out message back into chat.
+                            a.btn.btn-primary.rounded-pill.btn-lg(href="https://twitchshoutout.com/" target="_blank" rel="noopener") Try Twitch Shoutout

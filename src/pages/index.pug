@@ -1,0 +1,182 @@
+extends ../layout/index-layout.pug
+
+block title
+    - var date = ""
+    - var title = "Teklynk Tools - Free Twitch Overlays"
+    - var description = "Free browser-source overlays for Twitch streamers. Clips player, chat emotes, shoutouts, and more. No login required. Works in OBS and Streamlabs."
+    - var thumbnail = "https://teklynktools.com/assets/images/teklynk-profile.jpg"
+    - var pageUrl = "https://teklynktools.com"
+    - var skills = []
+    | Teklynk Tools - Home
+
+block content
+    section.hero-section
+        .container.py-5
+            .row.align-items-center.g-5
+                .col-lg-6
+                    h1.display-4.fw-bold
+                        | Browser-source overlays for Twitch streamers
+                    p.lead
+                        | 30K+ weekly uses. No account required.
+                    p
+                        | Clips player, emotes wall, shoutouts, and more.
+                    p
+                        | Pick a theme, add a URL, you're done.
+
+                    .d-flex.flex-wrap.gap-3.mt-4
+                        a.btn.btn-primary.btn-lg.rounded-pill(href="#tools") Explore tools
+                    ul.list-unstyled.mt-4.mb-0
+                        li
+                            i.fa-solid.fa-check.text-success.me-2
+                            | Chat engagement
+                        li
+                            i.fa-solid.fa-check.text-success.me-2
+                            | Community promotion
+                        li
+                            i.fa-solid.fa-check.text-success.me-2
+                            | Custom styling
+
+                .col-lg-6
+                    .hero-panel.shadow-lg
+                        .panel-header
+                            span.dot
+                            span.dot
+                            span.dot
+                        .panel-body
+                            .mini-card
+                                .small Weekly usage
+                                .text-white.fs-2.fw-bold 44K+ stream tool uses
+                            .mini-chart
+                                .bar(style="height: 36%")
+                                .bar(style="height: 52%")
+                                .bar(style="height: 68%")
+                                .bar(style="height: 82%")
+                                .bar(style="height: 100%")
+                            .row.g-3.mt-3
+                                .col-6
+                                    .stat-card
+                                        .small Shoutouts
+                                        .text-white.fs-3.fw-bold 30K+
+                                .col-6
+                                    .stat-card
+                                        .small Clips
+                                        .text-white.fs-3.fw-bold 14K+
+
+    section.feature-band
+        .container.py-5
+            .row.g-4.text-center
+                .col-md-4
+                    .feature-pill
+                        i.fs-1.fa-solid.fa-clapperboard
+                        span.fs-3 Clips Player
+                .col-md-4
+                    .feature-pill
+                        i.fs-1.fa-solid.fa-face-smile
+                        span.fs-3 Emotes
+                .col-md-4
+                    .feature-pill
+                        i.fs-1.fa-solid.fa-bullhorn
+                        span.fs-3 Shoutouts
+
+    section#tools
+        .container.py-5
+            .row.align-items-center.g-5
+                .col-lg-5
+                    .section-copy
+                        span.section-kicker Twitch tools
+                        h2 What these tools do
+                        p
+                            | Starting Soon scenes that aren't static. BRB transitions that keep viewers watching. Chat emotes visible to everyone on stream. Shoutouts that promote other creators. Overlays that can be customized for your needs.
+                .col-lg-7
+                    .row.g-4
+                        .col-md-6
+                            .feature-card.position-relative
+                                .feature-icon
+                                    i.fs-1.fa-solid.fa-clapperboard
+                                h3 Twitch Clips Player
+                                p
+                                    | Plays clips from your channel or channels you follow in a loop on your Starting Soon or BRB scene. Filter by date range, pick a theme, and add a details panel showing who made the clip.
+                                small
+                                    | Works in OBS, Moblin, Streamlabs as a browser source. Supports custom CSS, themes, and chat commands.
+                                a.stretched-link(href="/twitch-clips-player")
+
+                        .col-md-6
+                            .feature-card.position-relative
+                                .feature-icon
+                                    i.fs-1.fa-solid.fa-bullhorn
+                                h3 Twitch Shoutout
+                                p
+                                    | Promote other streamers by playing a clip from various streamers, chat-controlled shout-out actions with "!so @username".
+                                p
+                                    small
+                                        | Helps community growth and creator visibility.
+                                p
+                                    small
+                                        | Works in OBS, Moblin, Streamlabs as a browser source. Supports custom CSS, themes, and chat commands.
+                                a.stretched-link(href="/twitch-shout-out")
+
+                        .col-md-6
+                            .feature-card.position-relative
+                                .feature-icon
+                                    i.fs-1.fa-solid.fa-face-smile
+                                h3 Twitch Chat Emotes Wall
+                                p
+                                    | Animated overlay that turns chat emotes into a floating wall of reactions for your stream.
+                                p
+                                    small
+                                        | Supports Twitch, BetterTTV, 7TV, and FrankerFaceZ emotes.
+                                p
+                                    small
+                                        | Works in OBS, Moblin, Streamlabs as a browser source. No account required.
+                                a.stretched-link(href="/twitch-chat-emotes")
+
+                        .col-md-6
+                            .feature-card.position-relative
+                                .feature-icon
+                                    i.fs-1.fa-solid.fa-layer-group
+                                h3 Twitch Chat Overlay
+                                p
+                                    | Display live chat on your stream with customizable themes. Choose from built-in styles, enable third-party emotes, and set how many messages show.
+                                p
+                                    small       
+                                        | Change themes, emotes support, badges and other preferences via URL.
+                                p
+                                    small
+                                        | Works in OBS, Moblin, Streamlabs as a browser source. No account required. 
+                                a.stretched-link(href="/twitch-chat-overlay")
+
+    section
+        .container.py-5
+            .row.g-4.align-items-stretch
+                .col-lg-6
+                    .cta-panel
+                        span.section-kicker Under the hood
+                        h3 These are open-source tools. You can inspect, fork, or contribute
+                        p
+                            | Every project lives on GitHub with public issue tracking. Report bugs, suggest features, or browse existing discussions to see how other streamers use these overlays
+
+                        ul.list-unstyled.mt-4.mb-0
+                            li
+                                i.fa-solid.fa-check.text-success.me-2
+                                | GitHub Issues for bug reports and feature requests
+                            li
+                                i.fa-solid.fa-check.text-success.me-2
+                                | GitHub Discussions for tips, tricks, and community support
+                            li
+                                i.fa-solid.fa-check.text-success.me-2
+                                | Documented setup and configuration guides
+                            li
+                                i.fa-solid.fa-check.text-success.me-2
+                                | Quick turnaround on reported issues
+
+                .col-lg-6
+                    .cta-panel
+                        .feature-icon
+                            i.fs-1.fa-solid.fa-wand-magic-sparkles
+                        h3 Built by a single developer
+                        p
+                            | I'm not a streamer — I'm just a fan. I enjoy watching Twitch and wanted to build tools that help new and existing streamers. These tools grew from curiosity into something thousands of streamers use.
+                        ul.list-inline
+                            .list-inline-item.badge.bg-secondary-dark.p-2.m-1.fs-6 Developer built
+                            .list-inline-item.badge.bg-secondary-dark.p-2.m-1.fs-6 Community grown
+                            .list-inline-item.badge.bg-secondary-dark.p-2.m-1.fs-6 User feedback driven

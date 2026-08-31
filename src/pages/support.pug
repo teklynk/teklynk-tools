@@ -1,0 +1,45 @@
+extends ../layout/page-layout.pug
+
+block title
+    - var date = ""
+    - var title = "Support"
+    - var description = "Web Developer | Full Stack Developer | Linux user | Crafting innovative solutions through web development and hands-on tinkering."
+    - var thumbnail = ""
+    - var pageUrl = "https://www.teklynk.com/support"
+    - var skills = []
+    | Teklynk - #{title}
+
+block content
+    .product-detail-page
+        section.product-detail-hero
+            .container.py-5
+
+                span.section-kicker Support
+                p.lead 
+                    | If you enjoy some of the projects that I have developed, please consider donating. It helps support the online infrastructure that powers these projects.
+
+                .row.row-cols-1.row-cols-md-2.row-cols-lg-4.g-4.mt-3
+                    .col
+                        .text-center.feature-card.position-relative
+                            .d-flex.flex-column.justify-content-center.align-items-center
+                                i.fa-solid.fa-mug-hot.fa-3x.mb-3.text-danger
+                                h5 Support me on Ko-fi
+                                a.stretched-link(href="https://ko-fi.com/teklynk", target="_blank", rel="noopener noreferrer")
+                    .col
+                        .text-center.feature-card.position-relative
+                            .d-flex.flex-column.justify-content-center.align-items-center
+                                i.fa-brands.fa-github.fa-3x.mb-3.text-white
+                                h5 Support me on GitHub
+                                a.stretched-link(href="https://github.com/sponsors/teklynk", target="_blank", rel="noopener noreferrer")
+                    .col
+                        .text-center.feature-card.position-relative
+                            .d-flex.flex-column.justify-content-center.align-items-center
+                                i.fa-solid.fa-hand-holding-heart.fa-3x.mb-3.text-warning
+                                h5 Support me on Liberapay
+                                a.stretched-link(href="https://liberapay.com/teklynkliberapay/donate", target="_blank", rel="noopener noreferrer")
+                    .col
+                        .text-center.feature-card.position-relative
+                            .d-flex.flex-column.justify-content-center.align-items-center
+                                i.fa-brands.fa-paypal.fa-3x.mb-3.text-primary
+                                h5 Support me on PayPal
+                                a.stretched-link(href="https://www.paypal.com/donate/?hosted_button_id=UVKZUYFMXQDPL", target="_blank", rel="noopener noreferrer")

@@ -1,0 +1,123 @@
+extends ../layout/page-layout.pug
+
+block title
+    - var date = ""
+    - var title = "Twitch Chat Overlay | Teklynk Tools"
+    - var description = "Browser-source overlay for displaying Twitch chat with multiple themes, badges, and emote support."
+    - var thumbnail = "https://teklynktools.com/assets/images/twitchchat02.png"
+    - var pageUrl = "https://teklynktools.com/twitch-chat-overlay"
+    - var skills = []
+    | Teklynk Tools - Twitch Chat Overlay
+
+block content
+    .product-detail-page
+        section.product-detail-hero
+            .container.py-5
+                .row.align-items-center.g-5
+                    .col-lg-7
+                        span.section-kicker Twitch tool
+                        h1.display-5.fw-bold Twitch Chat Overlay
+                        p.lead
+                            | A clean chat overlay that renders live chat in a browser source with multiple themes, badges and emote support.
+                        .d-flex.flex-wrap.gap-3.mt-4
+                            a.btn.btn-primary.btn-lg.rounded-pill(href="https://twitchchatoverlay.teklynk.com/" target="_blank" rel="noopener") Open app #[small (Vertical chat overlay)]
+                            a.btn.btn-primary.btn-lg.rounded-pill(href="https://twitchchathorizontal.teklynk.com/" target="_blank" rel="noopener") Open app #[small (Horizontal chat overlay)]
+                            a.btn.btn-outline-light.btn-lg.rounded-pill(href="/") Back to tools
+                    .col-lg-5
+                        .detail-visual
+                            img.rounded.img-fluid.shadow-lg(src="/assets/images/twitchchat02.png" alt="Twitch Chat Overlay")
+
+        section.py-5
+            .container
+                .row.g-4
+                    .col-lg-12
+                        .detail-panel
+                            h3 When to Use
+                            ul.list-unstyled.mb-0
+                                li 
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong Make chat visible] to everyone watching your VODs
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong Third-party emotes] — Show BTTV and 7TV emotes in the overlay
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong Fade timing control] — Adjust how long messages linger on-screen
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong Limit messages] to Mods, VIPs and Subscribers only
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong Twitch user name colors] — Set to use chatters user color
+
+        section.py-5
+            .container
+                .row.g-4
+                    .col-md-4
+                        .detail-card
+                            .icon-wrap
+                                i.fs-1.fa-solid.fa-palette
+                            h3 Multiple themes
+                            p
+                                | Includes several built-in visual styles such as Modern, Cyber Orbitron, Pink, and Twitchy dark mode.
+                    .col-md-4
+                        .detail-card
+                            .icon-wrap
+                                i.fs-1.fa-solid.fa-face-smile
+                            h3 Emote support
+                            p
+                                | Supports Twitch emotes as well as BetterTTV and 7TV emotes.
+                    .col-md-4
+                        .detail-card
+                            .icon-wrap
+                                i.fs-1.fa-solid.fa-rocket
+                            h3 Performance
+                            p
+                                | Automatically prunes older messages from the DOM to keep the overlay lightweight during long broadcast sessions.
+
+        section.py-5
+            .container
+                .row.g-4
+                    .col-lg-6
+                        .detail-panel
+                            h3 Features
+                            ul.list-unstyled
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Multiple stylized themes
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Twitch, BetterTTV, and 7TV emote support
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Lightweight DOM management for long sessions
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Configurable badge, color, and message display behavior
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Easy OBS browser-source setup
+                    .col-lg-6
+                        .detail-panel
+                            h3 Configuration
+                            p
+                                | URL parameters control the channel, theme selection, message lifetime, badge visibility, emote support, and the maximum number of messages displayed.
+                            div.shadow-sm 
+                                pre
+                                    code.language-html.
+                                        ?channel=yourchannel&themeOption=2&fadeOutTime=60&maxMessages=25&showBadges=true
+
+        section.py-5
+            .container
+                .row.g-4.align-items-center
+                    .col-lg-6
+                        .detail-gallery
+                            img.rounded.img-fluid.shadow-lg(src="/assets/images/twitchchat01.png" alt="OBS stream setup")
+                    .col-lg-6
+                        .detail-panel
+                            h2 OBS setup
+                            p
+                                | Add a Browser Source in OBS, paste the generated URL, and set the width and height to match your stream layout. The overlay is designed to be lightweight and easy to drop into any scene.
+                            p
+                                | You can adjust the theme and behavior using simple query-string parameters.
+                            a.btn.btn-primary.rounded-pill.btn-lg(href="https://twitch-chat-overlay.teklynk.com/" target="_blank" rel="noopener") Try Twitch Chat Overlay

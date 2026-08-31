@@ -1,0 +1,125 @@
+extends ../layout/page-layout.pug
+
+block title
+    - var date = ""
+    - var title = "Twitch Clips Player | Teklynk Tools"
+    - var description = "Browser-source Twitch clips player overlay for OBS that plays recent or featured clips in a loop."
+    - var thumbnail = "https://teklynktools.com/assets/images/twitchclipsplayer01.png"
+    - var pageUrl = "https://teklynktools.com/twitchclipsplayer"
+    - var skills = []
+    | Teklynk Tools - Twitch Clips Player
+
+block content
+    .product-detail-page
+        section.product-detail-hero
+            .container.py-5
+                .row.align-items-center.g-5
+                    .col-lg-7
+                        span.section-kicker Twitch tool
+                        h1.display-5.fw-bold Twitch Clips Player
+                        p.lead
+                            | Browser-source overlay that pulls Twitch clips and plays them in a loop to keep a Starting Soon or BRB scene active and entertaining.
+                        .d-flex.flex-wrap.gap-3.mt-4
+                            a.btn.btn-primary.btn-lg.rounded-pill(href="https://twitchclipsplayer.com/" target="_blank" rel="noopener") Open app
+                            a.btn.btn-outline-light.btn-lg.rounded-pill(href="/") Back to tools
+                    .col-lg-5
+                        .detail-visual
+                            img.rounded.img-fluid.shadow-lg(src="/assets/images/twitchclipsplayer01.png" alt="Twitch Clips Player overlay")
+
+        section.py-5
+            .container
+                .row.g-4
+                    .col-lg-12
+                        .detail-panel
+                            h3 When to Use
+                            ul.list-unstyled.mb-0
+                                li 
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong Starting Soon] scene that isn't just a static image
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong BRB transitions] between games, breaks, intermissions
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong Showing clips] from other channels and/or your own channel during breaks
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong IRL Streams] — Play clips when your connection drops or when you need privacy
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong Let mods control] the reel via chat commands
+
+        section.py-2
+            .container
+                .row.g-4
+                    .col-md-4
+                        .detail-card
+                            .icon-wrap
+                                i.fs-1.fa-solid.fa-comments
+                            h3 Chat controls
+                            p
+                                | Control the player from Twitch chat using commands such as !clipskip, !clippause, !clipplay, and !clipreload, limited to mods and the streamer.
+                    .col-md-4
+                        .detail-card
+                            .icon-wrap
+                                i.fs-1.fa-solid.fa-filter
+                            h3 Smart filtering
+                            p
+                                | Filter clips by date range, prioritize featured clips, and fall back to popular recent content if no matches are found.
+                    .col-md-4
+                        .detail-card
+                            .icon-wrap
+                                i.fs-1.fa-solid.fa-gear
+                            h3 Configurable overlay
+                            p
+                                | Customize the overlay with themes, progress bar, details panel, and custom browser source CSS.
+
+        section.py-5
+            .container
+                .row.g-4
+                    .col-lg-6
+                        .detail-panel
+                            h3 Features
+                            ul.list-unstyled
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Following feed support for clips from channels you follow
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Custom chat commands to start or stop the reel
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Automatic fallback to popular clips when filters produce no results
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Lower-third details panel with variables like {channel}, {title}, {game}, and {creator_name}
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Browser source for OBS, Moblin, Streamlabs and other streaming softwares
+                    .col-lg-6
+                        .detail-panel
+                            h3 Configuration
+                            p
+                                | Query parameters can be added to the URL for settings like channel, limit, dateRange, preferFeatured, showFollowing, showText, and custom theme options. You can modify these values directly from the browser-source URL. No need to regenerate a new overlay URL.
+                            p
+                                | Example:
+                            div
+                                pre
+                                    code.language-html.
+                                        ?channel=mychannel&limit=20&dateRange=7&preferFeatured=true&showDetails=true
+
+        section.py-5
+            .container
+                .row.g-4.align-items-center
+                    .col-lg-6
+                        .detail-gallery
+                            img.rounded.img-fluid.shadow-lg(src="/assets/images/twitchclipsplayer04.png" alt="Stream overlay setup")
+                    .col-lg-6
+                        .detail-panel
+                            h2 OBS setup
+                            p
+                                | Add a Browser Source in OBS, enter the URL with the desired parameters, and enable the settings that refresh the source when the scene becomes active.
+                            p
+                                | Twitch authentication is required if you want to show clips from followed channels or use chat features.
+
+                            a.btn.btn-primary.rounded-pill.btn-lg(href="https://twitchclipsplayer.com/" target="_blank" rel="noopener") Try Twitch Clips Player

@@ -1,0 +1,122 @@
+extends ../layout/page-layout.pug
+
+block title
+    - var date = ""
+    - var title = "Twitch Chat Emotes Wall | Teklynk Tools"
+    - var description = "Twitch brower-souorce overlay that displays chat emotes floating across the screen."
+    - var thumbnail = "https://teklynktools.com/assets/images/twitchemotes-demo01.gif"
+    - var pageUrl = "https://teklynktools.com/twitch-chat-emotes"
+    - var skills = []
+    | Teklynk Tools - Twitch Chat Emotes Wall
+
+block content
+    .product-detail-page
+        section.product-detail-hero
+            .container.py-5
+                .row.align-items-center.g-5
+                    .col-lg-7
+                        span.section-kicker Twitch tool
+                        h1.display-5.fw-bold Twitch Chat Emotes Wall
+                        p.lead
+                            | Displays emotes from your chat as animated overlays floating across your stream. Works with Twitch, BetterTTV, 7TV, and FrankerFacez. Choose effects like grow, rotate, skew, or float.
+                        .d-flex.flex-wrap.gap-3.mt-4
+                            a.btn.btn-primary.btn-lg.rounded-pill(href="https://twitch-chat-emotes.teklynk.com/" target="_blank" rel="noopener") Open app
+                            a.btn.btn-outline-light.btn-lg.rounded-pill(href="/") Back to tools
+                    .col-lg-5
+                        .detail-visual
+                            img.rounded.img-fluid.shadow-lg(src="/assets/images/twitchemotes-demo01.gif" alt="Twitch Chat Emotes overlay")
+
+        section.py-5
+            .container
+                .row.g-4
+                    .col-lg-12
+                        .detail-panel
+                            h3 When to Use
+                            ul.list-unstyled.mb-0
+                                li 
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong DJ or music streams] — Emotes float across the screen while you play
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong High-energy moments] — Big plays, hype tains, donations, raid celebrations
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong Visual filler] — Keeps the screen alive during quiet stretches
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong Bot-controlled emote shows] — Filter to only show emotes from a specific bot or user
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | #[strong Custom styling] — Add drop shadows, grayscale, rainbow borders, or flip emotes via CSS. Adjust emote size, speed, randomize
+
+        section.py-5
+            .container
+                .row.g-4
+                    .col-md-4
+                        .detail-card
+                            .icon-wrap
+                                i.fs-1.fa-solid.fa-bolt
+                            h3 Performance
+                            p
+                                | Lightweight and optimized for OBS, with testing aimed at handling 1000+ emotes without heavy overhead.
+                    .col-md-4
+                        .detail-card
+                            .icon-wrap
+                                i.fs-1.fa-solid.fa-sliders
+                            h3 Customization
+                            p
+                                | Adjust animation speed, duration, size, effects, and layout behavior using URL parameters and custom CSS.
+                    .col-md-4
+                        .detail-card
+                            .icon-wrap
+                                i.fs-1.fa-solid.fa-gear
+                            h3 Plugin support
+                            p
+                                | Works with native Twitch emotes as well as BetterTTV, SevenTV, and FrankerFacez libraries.
+
+        section.py-5
+            .container
+                .row.g-4
+                    .col-lg-6
+                        .detail-panel
+                            h3 Features
+                            ul.list-unstyled
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Third-party emote support for BetterTTV, SevenTV, and FrankerFacez
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Multiple animation effects: grow, rotate, skew, float, and random
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Custom emote speed, duration, and size controls
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Fish tank mode — emotes stay on screen
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | No server required for basic use
+                    .col-lg-6
+                        .detail-panel
+                            h3 Configuration
+                            p
+                                | The overlay is configured with URL parameters such as channel, speed, duration, size, effect, bttv, 7tv, ffz, and emoteLimit.
+                            div.shadow-sm 
+                                pre
+                                    code.language-html.
+                                        ?channel=MrStreamer&speed=5000&duration=15000&size=3&effect=grow&bttv=true&7tv=true&ffz=true
+
+        section.py-5
+            .container
+                .row.g-4.align-items-center
+                    .col-lg-6
+                        .detail-gallery
+                            img.rounded.img-fluid.shadow-lg(src="/assets/images/twitchemotes-setup.png" alt="Stream setup")
+                    .col-lg-6
+                        .detail-panel
+                            h2 How to use it in OBS
+                            p
+                                | Add a new Browser source in OBS, paste the generated URL. The tool is designed to run as a lightweight browser overlay without requiring a custom backend.
+                            p
+                                | For smoother animation, avoid speeds below 5000ms and consider increasing the browser frame rate in OBS if needed.
+                            a.btn.btn-primary.rounded-pill.btn-lg(href="https://twitch-chat-emotes.teklynk.com/" target="_blank" rel="noopener") Try Twitch Chat Emotes

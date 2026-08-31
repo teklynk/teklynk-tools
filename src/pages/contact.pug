@@ -1,0 +1,41 @@
+extends ../layout/page-layout.pug
+
+block title
+    - var date = ""
+    - var title = "Contact"
+    - var description = "Web Developer | Full Stack Developer | Linux user | Crafting innovative solutions through web development and hands-on tinkering."
+    - var thumbnail = ""
+    - var pageUrl = "https://teklynktools.com/contact"
+    - var skills = []
+    | Teklynk Tools - Contact
+
+block content
+    .product-detail-page
+        section.product-detail-hero
+            .container.py-5
+                .row.g-4.align-items-center
+                    .col-lg-6
+                        span.section-kicker Contact
+                        h1.display-5.fw-bold Let's build something
+                        p.lead
+                            | Need a Twitch tool, custom overlay, or a streaming-focused tool built around your workflow?
+                        p
+                            | Whether you want a custom variant of an existing tool or a new stream utility built from scratch, I can help.
+                    .col-lg-6
+                        .detail-panel
+                            ul.list-unstyled.mb-0
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Twitch overlays and browser-source tools
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Custom streamer dashboards and automation
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Intergrations (Chat bots, Discord, event driven notifications)
+                                li
+                                    i.fa-solid.fa-check.text-success.me-2
+                                    | Website design and full-stack development. From the code to deployment
+
+                .mt-4
+                    script(data-letterbirduser="teklynk", src="https://letterbird.co/embed/v1.js")
