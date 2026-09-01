@@ -1,0 +1,29 @@
+extends ../layout/page-layout.pug
+
+block title
+    - var date = ""
+    - var title = "Discord | Teklynk Tools"
+    - var description = "Web Developer | Full Stack Developer | Linux user | Crafting innovative solutions through web development and hands-on tinkering."
+    - var thumbnail = ""
+    - var pageUrl = "https://teklynktools.com/discord"
+    - var skills = []
+    | Teklynk Tools - Discord
+
+block content
+    .product-detail-page
+        section.product-detail-hero
+            .container.py-5
+                .row.g-4.align-items-center
+                    .col-lg-12
+                        span.section-kicker Discord
+                        h1.display-5.fw-bold Let's hangout
+                        p.lead
+                            | The unofficial Dicord server for Teklynk Tools users. Watch development happen live — every update posts to our changelog channel as it happens. Get help configuring overlays, share tips, and talk to the dev directly.
+
+                .row.row-cols-1.g-4.mt-3
+                    .col
+                        .text-center.feature-card.position-relative
+                            .d-flex.flex-column.justify-content-center.align-items-center
+                                i.fa-brands.fa-discord.fa-3x.mb-3.text-white
+                                h5 Join the Discord
+                                a.stretched-link(href="https://discord.gg/rrFZQY2AQ7", target="_blank", rel="noopener noreferrer")
