@@ -5,22 +5,37 @@ link(rel="shortcut icon", href="https://teklynktools.com/assets/icons/favicon.ic
 link(rel="apple-touch-icon", sizes="180x180", href="https://teklynktools.com/assets/icons/apple-touch-icon.png")
 link(rel="manifest", href="https://teklynktools.com/assets/icons/site.webmanifest")
 meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+//- Titles
 title
     block title
-        | Teklynk Tools
-meta(name='description', content=description ? description : "Web Developer | Full Stack Developer | Linux user | Crafting innovative solutions through web development and hands-on tinkering.")
-link(rel="canonical", href=pageUrl ? pageUrl : "https://teklynktools.com")
-meta(property="og:locale" content="en_US")
-meta(property="og:type", content="website")
-meta(property="og:title" content=title ? title : "Teklynk Tools")
+        | Teklynk Tools - Twitch Overlays for OBS & Streamlabs
 meta(property="og:site_name" content="Teklynk Tools")
+
+//- Descriptions
+meta(name='description', content=description ? description : "Browser-source overlays for Twitch streamers. Clips player, chat emotes, shoutouts, chat overlay and more. Works in OBS, Streamlabs and Moblin. No account required.")
+meta(property="og:description", content=description ? description : "Browser-source overlays for OBS, Streamlabs and Moblin. 30K+ weekly uses. No account required.")
+meta(name="twitter:description", content=description ? description : "Browser-source overlays for OBS, Streamlabs and Moblin. 30K+ weekly uses. No account required.")
+
+//- URLs
+link(rel="canonical", href=pageUrl ? pageUrl : "https://teklynktools.com")
 meta(property="og:url", content=pageUrl ? pageUrl : "https://teklynktools.com")
-meta(property="og:description", content=description ? description : "Web Developer | Full Stack Developer | Linux user | Crafting innovative solutions through web development and hands-on tinkering.")
-meta(property="og:image", content=thumbnail ? thumbnail : "https://teklynktools.com/assets/images/teklynk-profile.jpg")
-meta(property="og:logo", content="https://teklynktools.com/assets/images/teklynk-profile.jpg")
-meta(property="twitter:card" content="summary_large_image")
-meta(property="twitter:domain", content="teklynktools.com")
 meta(property="twitter:url" content=pageUrl ? pageUrl : "https://teklynktools.com")
-meta(name="twitter:title", content=title ? title : "TeklynkTools.com")
-meta(name="twitter:description", content=description ? description : "Web Developer | Full Stack Developer | Linux user | Crafting innovative solutions through web development and hands-on tinkering.")
-meta(name="twitter:image", content=thumbnail ? thumbnail : "https://teklynktools.com/assets/images/teklynk-profile.jpg")
+meta(property="twitter:domain" content="teklynktools.com")
+
+//- Titles (og + twitter)
+meta(property="og:title" content=title ? title : "Teklynk Tools")
+meta(name="twitter:title" content=title ? title : "Teklynk Tools")
+
+//- Images (1200x630 recommended)
+meta(property="og:image", content=thumbnail ? thumbnail : "https://teklynktools.com/assets/images/teklynktools-promo.png")
+meta(property="og:image:width" content="1200")
+meta(property="og:image:height" content="630")
+meta(property="og:image:alt" content="Teklynk Tools - Browser-source overlays for Twitch streamers")
+meta(name="twitter:image" content=thumbnail ? thumbnail : "https://teklynktools.com/assets/images/teklynktools-promo.png")
+meta(name="twitter:image:alt" content="Teklynk Tools - Browser-source overlays for Twitch streamers")
+
+//- Social card basics
+meta(property="og:locale" content="en_US")
+meta(property="og:type" content="website")
+meta(name="twitter:card" content="summary_large_image")
