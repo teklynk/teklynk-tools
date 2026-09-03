@@ -28,8 +28,8 @@ block content
 
         section.py-5
             .container
-                .row.g-4
-                    .col-lg-12
+                .row.g-4.align-items-center
+                    .col-lg-7
                         .detail-panel
                             h3 When to Use
                             ul.list-unstyled.mb-0
@@ -48,6 +48,16 @@ block content
                                 li
                                     i.fa-solid.fa-check.text-success.me-2
                                     | #[strong Let mods control] the reel via chat commands
+
+                    .col-lg-5
+                        .detail-panel.h-100
+                            h3 Demo video
+                            .mt-3
+                                iframe#odysee-iframe.border.rounded.shadow-lg(
+                                    style="width:100%; aspect-ratio:16 / 9;"
+                                    src="https://odysee.com/%24/embed/%40teklynk%3Ac%2Fteklynktools-clipsplayer-demo%3A5?r=6kei5PPCVaPWL5HURU9aAyq2KXEoE6ki"
+                                    allowfullscreen
+                                )
 
         section.py-2
             .container
