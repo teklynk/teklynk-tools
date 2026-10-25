@@ -37,7 +37,7 @@ block content
                             | Custom styling
 
                 .col-lg-6
-                    .hero-panel.shadow-lg
+                    .hero-panel.panel-shadow
                         .panel-header
                             span.dot
                             span.dot
@@ -87,7 +87,6 @@ block content
             .row.align-items-center.g-5
                 .col-lg-5
                     .section-copy
-                        span.section-kicker Twitch tools
                         h2 What these tools do
                         p
                             | Starting Soon scenes that aren't static. BRB transitions that keep viewers watching. Chat emotes visible to everyone on stream. Shoutouts that promote other creators. Overlays that can be customized for your needs.
@@ -172,12 +171,58 @@ block content
                                         | Click for more details 
                                 a.stretched-link(href="/twitch-chat-overlay")
 
+    section.testimonial-band.d-none(aria-labelledby="testimonials-heading")
+        .container.py-5
+            .d-flex.flex-wrap.justify-content-between.align-items-end.gap-3.mb-4
+                div
+                    h2#testimonials-heading.mb-0 What Are the Users Saying?
+
+            #streamerTestimonials.carousel.slide.carousel-fade.panel-shadow(data-bs-ride="carousel" data-bs-interval="6000" aria-label="Streamer testimonials")
+                .carousel-indicators
+                    button(data-bs-target="#streamerTestimonials" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Sample Creator 01 testimonial")
+                    button(data-bs-target="#streamerTestimonials" data-bs-slide-to="1" aria-label="Sample Creator 02 testimonial")
+                    button(data-bs-target="#streamerTestimonials" data-bs-slide-to="2" aria-label="Sample Creator 03 testimonial")
+                .carousel-inner
+                    .carousel-item.active
+                        article.testimonial-slide
+                            a.testimonial-profile(href="https://www.twitch.tv/samplecreator01" target="_blank" rel="noopener noreferrer" aria-label="Visit Sample Creator 01 on Twitch")
+                                i.fa-brands.fa-twitch(aria-hidden="true")
+                            .testimonial-copy
+                                blockquote
+                                    p.mb-3 The clips player gave my Starting Soon scene a little more life, and setup was refreshingly simple.
+                                .testimonial-attribution
+                                    strong Sample Creator 01
+
+                    .carousel-item
+                        article.testimonial-slide
+                            a.testimonial-profile(href="https://www.twitch.tv/samplecreator02" target="_blank" rel="noopener noreferrer" aria-label="Visit Sample Creator 02 on Twitch")
+                                i.fa-brands.fa-twitch(aria-hidden="true")
+                            .testimonial-copy
+                                blockquote
+                                    p.mb-3 I wanted a chat overlay I could make my own. Picking a theme and adjusting the URL was all it took.
+                                .testimonial-attribution
+                                    strong Sample Creator 02
+
+                    .carousel-item
+                        article.testimonial-slide
+                            a.testimonial-profile(href="https://www.twitch.tv/samplecreator03" target="_blank" rel="noopener noreferrer" aria-label="Visit Sample Creator 03 on Twitch")
+                                i.fa-brands.fa-twitch(aria-hidden="true")
+                            .testimonial-copy
+                                blockquote
+                                    p.mb-3 The shoutout tool makes it easy to celebrate other creators and share their clips with my community.
+                                .testimonial-attribution
+                                    strong Sample Creator 03
+
+                button.carousel-control-prev(type="button" data-bs-target="#streamerTestimonials" data-bs-slide="prev" aria-label="Previous testimonial")
+                    span.carousel-control-prev-icon(aria-hidden="true")
+                button.carousel-control-next(type="button" data-bs-target="#streamerTestimonials" data-bs-slide="next" aria-label="Next testimonial")
+                    span.carousel-control-next-icon(aria-hidden="true")
+
     section
         .container.py-5
             .row.g-4.align-items-stretch
                 .col-lg-6
-                    .cta-panel
-                        span.section-kicker Under the hood
+                    .cta-panel.panel-shadow
                         h3 These are open-source tools. You can inspect, fork, or contribute
                         p
                             | Every project lives on GitHub with public issue tracking. Report bugs, suggest features, or browse existing discussions to see how other streamers use these overlays
@@ -197,14 +242,17 @@ block content
                                 | Quick turnaround on reported issues
 
                 .col-lg-6
-                    .cta-panel
+                    .cta-panel.panel-shadow
                         .feature-icon
                             i.fs-1.fa-solid.fa-wand-magic-sparkles
                         h3 Built by a single developer
-                        p
-                            | I'm not a streamer — I'm just a fan. I enjoy watching Twitch and wanted to build tools that help new and existing streamers. These tools grew from curiosity into something thousands of streamers use.
-                        p
-                            | Authenticity over production value, technical honesty over marketing fluff. Have fun, be creative, Enjoy!
+                        .developer-bio
+                            img.img-rounded.developer-profile(src="/assets/images/teklynk-profile.jpg", alt="Teklynk developer")
+                            .developer-bio-copy
+                                p
+                                    | I'm not a streamer — I'm just a fan. I enjoy watching Twitch and wanted to build tools that help new and existing streamers. These tools grew from curiosity into something thousands of streamers use.
+                                p
+                                    | Authenticity over production value, technical honesty over marketing fluff. Have fun, be creative, Enjoy!
                         ul.list-inline
                             .list-inline-item.badge.bg-secondary-dark.p-2.m-1.fs-6 Developer built
                             .list-inline-item.badge.bg-secondary-dark.p-2.m-1.fs-6 Community grown
