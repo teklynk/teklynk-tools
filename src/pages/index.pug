@@ -87,6 +87,7 @@ block content
             .row.align-items-center.g-5
                 .col-lg-5
                     .section-copy
+                        span.section-kicker Twitch tools
                         h2 What these tools do
                         p
                             | Starting Soon scenes that aren't static. BRB transitions that keep viewers watching. Chat emotes visible to everyone on stream. Shoutouts that promote other creators. Overlays that can be customized for your needs.
@@ -179,44 +180,53 @@ block content
 
             #streamerTestimonials.carousel.slide.carousel-fade.panel-shadow(data-bs-ride="carousel" data-bs-interval="6000" aria-label="Streamer testimonials")
                 .carousel-indicators
-                    button(data-bs-target="#streamerTestimonials" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Sample Creator 01 testimonial")
-                    button(data-bs-target="#streamerTestimonials" data-bs-slide-to="1" aria-label="Sample Creator 02 testimonial")
-                    button(data-bs-target="#streamerTestimonials" data-bs-slide-to="2" aria-label="Sample Creator 03 testimonial")
+                    button(data-bs-target="#streamerTestimonials" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1")
+                    button(data-bs-target="#streamerTestimonials" data-bs-slide-to="1" aria-label="Slide 2")
+                    button(data-bs-target="#streamerTestimonials" data-bs-slide-to="2" aria-label="Slide 3")
                 .carousel-inner
                     .carousel-item.active
                         article.testimonial-slide
-                            a.testimonial-profile(href="https://www.twitch.tv/samplecreator01" target="_blank" rel="noopener noreferrer" aria-label="Visit Sample Creator 01 on Twitch")
-                                i.fa-brands.fa-twitch(aria-hidden="true")
+                            a.testimonial-profile(href="https://www.twitch.tv/artyomhavok" target="_blank" rel="noopener noreferrer" aria-label="Visit artyomhavok on Twitch")
+                                img.img-rounded(src="/assets/avatars/artyomhavok.png", alt="ArtyomHavok avatar")
                             .testimonial-copy
                                 blockquote
                                     p.mb-3 The clips player gave my Starting Soon scene a little more life, and setup was refreshingly simple.
                                 .testimonial-attribution
-                                    strong Sample Creator 01
+                                    a(href="https://www.twitch.tv/artyomhavok" target="_blank" rel="noopener noreferrer" aria-label="Visit artyomhavok on Twitch")
+                                        strong ArtyomHavok
+                                    small.d-block Streamer
 
                     .carousel-item
                         article.testimonial-slide
-                            a.testimonial-profile(href="https://www.twitch.tv/samplecreator02" target="_blank" rel="noopener noreferrer" aria-label="Visit Sample Creator 02 on Twitch")
-                                i.fa-brands.fa-twitch(aria-hidden="true")
+                            a.testimonial-profile(href="https://www.twitch.tv/radgryd" target="_blank" rel="noopener noreferrer" aria-label="Visit Radgryd on Twitch")
+                                img.img-rounded(src="/assets/avatars/radgryd.png", alt="Radgryd avatar")
                             .testimonial-copy
                                 blockquote
                                     p.mb-3 I wanted a chat overlay I could make my own. Picking a theme and adjusting the URL was all it took.
                                 .testimonial-attribution
-                                    strong Sample Creator 02
+                                    a(href="https://www.twitch.tv/radgryd" target="_blank" rel="noopener noreferrer" aria-label="Visit Radgryd on Twitch")
+                                        strong Radgryd
+                                    small.d-block Streamer
 
                     .carousel-item
                         article.testimonial-slide
-                            a.testimonial-profile(href="https://www.twitch.tv/samplecreator03" target="_blank" rel="noopener noreferrer" aria-label="Visit Sample Creator 03 on Twitch")
-                                i.fa-brands.fa-twitch(aria-hidden="true")
+                            a.testimonial-profile(href="https://www.twitch.tv/techier0b" target="_blank" rel="noopener noreferrer" aria-label="Visit techieR0b on Twitch")
+                                img.img-rounded(src="/assets/avatars/techier0b.png", alt="techieR0b avatar")
                             .testimonial-copy
                                 blockquote
                                     p.mb-3 The shoutout tool makes it easy to celebrate other creators and share their clips with my community.
                                 .testimonial-attribution
-                                    strong Sample Creator 03
+                                    a(href="https://www.twitch.tv/techier0b" target="_blank" rel="noopener noreferrer" aria-label="Visit techieR0b on Twitch")
+                                        strong techieR0b
+                                    small.d-block Streamer
 
                 button.carousel-control-prev(type="button" data-bs-target="#streamerTestimonials" data-bs-slide="prev" aria-label="Previous testimonial")
                     span.carousel-control-prev-icon(aria-hidden="true")
                 button.carousel-control-next(type="button" data-bs-target="#streamerTestimonials" data-bs-slide="next" aria-label="Next testimonial")
                     span.carousel-control-next-icon(aria-hidden="true")
+            p.text-center.mt-4
+                | Want to share your experience? 
+                a(href="/contact" target="_self" rel="me noopener") Contact me  
 
     section
         .container.py-5
@@ -243,8 +253,6 @@ block content
 
                 .col-lg-6
                     .cta-panel.panel-shadow
-                        .feature-icon
-                            i.fs-1.fa-solid.fa-wand-magic-sparkles
                         h3 Built by a single developer
                         .developer-bio
                             img.img-rounded.developer-profile(src="/assets/images/teklynk-profile.jpg", alt="Teklynk developer")

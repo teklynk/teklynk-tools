@@ -132,7 +132,6 @@ img.img-rounded {
 }
 
 .testimonial-attribution {
-    display: flex;
     flex-wrap: wrap;
     align-items: baseline;
     gap: 0.75rem;
@@ -160,6 +159,10 @@ img.img-rounded {
         height: 3.75rem;
         flex-basis: 3.75rem;
         font-size: 1.25rem;
+    }
+
+    .testimonial-profile, .developer-profile {
+        display: none;
     }
 
     .testimonial-copy blockquote {
