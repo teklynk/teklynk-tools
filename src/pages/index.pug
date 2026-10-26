@@ -62,7 +62,7 @@ block content
                                         .small Clips
                                         .text-white.fs-4.fw-bold 14K+
 
-    section.feature-band
+    section.band
         .container.py-5
             .row.g-4.text-center
                 .col-lg-3.col-md-6
@@ -172,7 +172,7 @@ block content
                                         | Click for more details 
                                 a.stretched-link(href="/twitch-chat-overlay")
 
-    section.testimonial-band.d-none(aria-labelledby="testimonials-heading")
+    section.band.d-none(aria-labelledby="testimonials-heading")
         .container.py-5
             .d-flex.flex-wrap.justify-content-between.align-items-end.gap-3.mb-4
                 div
@@ -183,50 +183,60 @@ block content
                     button(data-bs-target="#streamerTestimonials" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1")
                     button(data-bs-target="#streamerTestimonials" data-bs-slide-to="1" aria-label="Slide 2")
                     button(data-bs-target="#streamerTestimonials" data-bs-slide-to="2" aria-label="Slide 3")
+                    button(data-bs-target="#streamerTestimonials" data-bs-slide-to="3" aria-label="Slide 4")
                 .carousel-inner
                     .carousel-item.active
                         article.testimonial-slide
-                            a.testimonial-profile(href="https://www.twitch.tv/artyomhavok" target="_blank" rel="noopener noreferrer" aria-label="Visit artyomhavok on Twitch")
-                                img.img-rounded(src="/assets/avatars/artyomhavok.png", alt="ArtyomHavok avatar")
+                            a.testimonial-profile(href="https://www.twitch.tv/artyomhavok?utm_source=teklynktools.com_testimonial" target="_blank" rel="noopener noreferrer" aria-label="Visit artyomhavok on Twitch")
+                                img.img-rounded(src="https://static-cdn.jtvnw.net/jtv_user_pictures/17784a06-82a1-4181-8714-583c5c7b774d-profile_image-300x300.png", alt="ArtyomHavok avatar")
                             .testimonial-copy
                                 blockquote
                                     p.mb-3 The clips player gave my Starting Soon scene a little more life, and setup was refreshingly simple.
                                 .testimonial-attribution
-                                    a(href="https://www.twitch.tv/artyomhavok" target="_blank" rel="noopener noreferrer" aria-label="Visit artyomhavok on Twitch")
+                                    a(href="https://www.twitch.tv/artyomhavok?utm_source=teklynktools.com_testimonial" target="_blank" rel="noopener noreferrer" aria-label="Visit artyomhavok on Twitch")
                                         strong ArtyomHavok
-                                    small.d-block Streamer
+                                    small.d-block.muted Streamer
 
                     .carousel-item
                         article.testimonial-slide
-                            a.testimonial-profile(href="https://www.twitch.tv/radgryd" target="_blank" rel="noopener noreferrer" aria-label="Visit Radgryd on Twitch")
-                                img.img-rounded(src="/assets/avatars/radgryd.png", alt="Radgryd avatar")
+                            a.testimonial-profile(href="https://www.twitch.tv/radgryd?utm_source=teklynktools.com_testimonial" target="_blank" rel="noopener noreferrer" aria-label="Visit Radgryd on Twitch")
+                                img.img-rounded(src="https://static-cdn.jtvnw.net/jtv_user_pictures/e958588c-f901-4e81-b29a-f5023de115dc-profile_image-300x300.png", alt="Radgryd avatar")
                             .testimonial-copy
                                 blockquote
-                                    p.mb-3 I wanted a chat overlay I could make my own. Picking a theme and adjusting the URL was all it took.
+                                    p.mb-3 Teklynk builds for the community. The tools he provides make streams more interactive and help streamers connect with their audience. You'd be a fool not to try them. 😏
                                 .testimonial-attribution
-                                    a(href="https://www.twitch.tv/radgryd" target="_blank" rel="noopener noreferrer" aria-label="Visit Radgryd on Twitch")
+                                    a(href="https://www.twitch.tv/radgryd?utm_source=teklynktools.com_testimonial" target="_blank" rel="noopener noreferrer" aria-label="Visit Radgryd on Twitch")
                                         strong Radgryd
-                                    small.d-block Streamer
+                                    small.d-block.muted Streamer
 
                     .carousel-item
                         article.testimonial-slide
-                            a.testimonial-profile(href="https://www.twitch.tv/techier0b" target="_blank" rel="noopener noreferrer" aria-label="Visit techieR0b on Twitch")
-                                img.img-rounded(src="/assets/avatars/techier0b.png", alt="techieR0b avatar")
+                            a.testimonial-profile(href="https://www.twitch.tv/ladygamega?utm_source=teklynktools.com_testimonial" target="_blank" rel="noopener noreferrer" aria-label="Visit LadyGameGa on Twitch")
+                                img.img-rounded(src="https://static-cdn.jtvnw.net/jtv_user_pictures/8788ab3c-c5bc-4d55-aa13-5ef9e57f71e1-profile_image-300x300.png", alt="LadyGameGa avatar")
+                            .testimonial-copy
+                                blockquote
+                                    p.mb-3 Teklynk builds for the community. The tools he provides make streams more interactive and help streamers connect with their audience. You'd be a fool not to try them. 😏
+                                .testimonial-attribution
+                                    a(href="https://www.twitch.tv/ladygamega?utm_source=teklynktools.com_testimonial" target="_blank" rel="noopener noreferrer" aria-label="Visit LadyGameGa on Twitch")
+                                        strong LadyGameGa
+                                    small.d-block.muted Streamer
+
+                    .carousel-item
+                        article.testimonial-slide
+                            a.testimonial-profile(href="https://www.twitch.tv/techier0b?utm_source=teklynktools.com_testimonial" target="_blank" rel="noopener noreferrer" aria-label="Visit techieR0b on Twitch")
+                                img.img-rounded(src="https://static-cdn.jtvnw.net/jtv_user_pictures/7658100b-2058-41f3-aa47-f1274bb256e9-profile_image-300x300.png", alt="techieR0b avatar")
                             .testimonial-copy
                                 blockquote
                                     p.mb-3 The shoutout tool makes it easy to celebrate other creators and share their clips with my community.
                                 .testimonial-attribution
-                                    a(href="https://www.twitch.tv/techier0b" target="_blank" rel="noopener noreferrer" aria-label="Visit techieR0b on Twitch")
+                                    a(href="https://www.twitch.tv/techier0b?utm_source=teklynktools.com_testimonial" target="_blank" rel="noopener noreferrer" aria-label="Visit techieR0b on Twitch")
                                         strong techieR0b
-                                    small.d-block Streamer
+                                    small.d-block.muted Streamer
 
                 button.carousel-control-prev(type="button" data-bs-target="#streamerTestimonials" data-bs-slide="prev" aria-label="Previous testimonial")
                     span.carousel-control-prev-icon(aria-hidden="true")
                 button.carousel-control-next(type="button" data-bs-target="#streamerTestimonials" data-bs-slide="next" aria-label="Next testimonial")
                     span.carousel-control-next-icon(aria-hidden="true")
-            p.text-center.mt-4
-                | Want to share your experience? 
-                a(href="/contact" target="_self" rel="me noopener") Contact me  
 
     section
         .container.py-5
